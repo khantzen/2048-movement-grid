@@ -43,9 +43,5 @@
     ([one two & tail]  (if (= one two)  (into [(time-2 one)] (apply merge-values tail)) (into [one] (apply merge-values two tail)))  )
 )
     
-
 (defn filter-non-null [list] (filter #(not (nil? %)) list))
 (defn time-2 [value] (* value 2))
-
-
-
